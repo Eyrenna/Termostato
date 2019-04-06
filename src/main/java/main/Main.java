@@ -1,6 +1,7 @@
 package main;
 
 import ambiente.Ambiente;
+import detalles.Regulator;
 
 public class Main {
 
@@ -16,11 +17,11 @@ public class Main {
         Regulator regulator = new Regulator();
 
         System.out.println( "Arrancando..." );
-        regulator.regulate(thermometer, heater, minTemp, maxTemp, temperature);
+        regulator.regulate(thermometer, heater, minTemp, maxTemp, temperatura);
 
         Jedi yoda = new Jedi();
         System.out.println( "\nArrancando a Yoda: " );
-        regulator.regulate(thermometer, yoda, minTemp, maxTemp, temperature);
+        regulator.regulate(thermometer, yoda, minTemp, maxTemp, temperatura);
         yoda.speak();
     }
 }
