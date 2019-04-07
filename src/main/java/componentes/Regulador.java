@@ -5,9 +5,9 @@ import interfaces.Calentable;
 import interfaces.Termosensible;
 
 
-public class Regulator {
+public class Regulador {
 
-    public void regulate(Termosensible termometro, Calentable calentador, double minTemp, double maxTemp, Ambiente temperatura) {
+    public void regular(Termosensible termometro, Calentable calentador, double minTemp, double maxTemp, Ambiente temperatura) {
         RegulatorDisplayCodes code;
         while (termometro.read(temperatura) < maxTemp) {
             code = RegulatorDisplayCodes.HEATING;
