@@ -7,8 +7,8 @@ public class EstufaSolar implements Calentable {
 
     //Atributos
 
-    public double reservas = 0d; //Porcentaje
-    public double alertaReserva = 0d;
+    private double reservas = 0d; //Porcentaje
+    private double alertaReserva = 0d;
     private final int NO_RESERVAS = 5; //Minimo no modificable por seguridad de la maquinaria
     private final double MAX_RENDIMIENTO = 2;
     private final int CONSUMO = -10;
@@ -47,7 +47,7 @@ public class EstufaSolar implements Calentable {
 
 
     //Métodos
-    @Override
+
     public void engage(Ambiente temperatura) {
         if (reservas > alertaReserva) {
             temperatura.modificarTemperatura(this.MAX_RENDIMIENTO);
@@ -64,7 +64,6 @@ public class EstufaSolar implements Calentable {
         }
     }
 
-    @Override
     public void disengage(Ambiente temperatura) {
         temperatura.modificarTemperatura(this.ENFRIAMIENTO);
         modificarReservas(5);

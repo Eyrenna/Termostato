@@ -13,7 +13,6 @@ public class Termometro implements Termosensible {
 
     //Métodos
 
-    @Override
     public double read(Ambiente temperatura) {
         return temperatura.getTemp();
     }

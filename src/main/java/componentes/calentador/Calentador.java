@@ -19,12 +19,10 @@ public class Calentador implements Calentable {
 
     //Métodos
 
-    @Override
     public void engage(Ambiente temperatura) {
         temperatura.modificarTemperatura(this.SUBIDA);
     }
 
-    @Override
     public void disengage(Ambiente temperatura) {
         temperatura.modificarTemperatura(this.BAJADA);
     }
