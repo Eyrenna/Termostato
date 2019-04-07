@@ -33,4 +33,8 @@ public class Ambiente {
     public Double getTemp() {
         return this.temp;
     }
+
+    public void modificarTemperatura(double cambio) {
+        this.temp += cambio;
+    }
 }

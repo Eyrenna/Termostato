@@ -1,6 +1,7 @@
 package main;
 
 import ambiente.Ambiente;
+import componentes.Calentador;
 import componentes.Regulator;
 import interfaces.Calentable;
 
@@ -12,7 +13,7 @@ public class Main {
         final double maxTemp = 21.0;
 
         Ambiente temperatura = Ambiente.getTemperatura(15.0);
-        Calentable radiador = new GasHeater();
+        Calentable radiador = new Calentador();
         Thermometer thermometer = new RemoteCommandSensor();
 
         Regulator regulator = new Regulator();
