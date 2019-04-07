@@ -3,6 +3,7 @@ package main;
 import ambiente.Ambiente;
 import componentes.Calentador;
 import componentes.Regulator;
+import componentes.Termometro;
 import interfaces.Calentable;
 import interfaces.Termosensible;
 
@@ -15,12 +16,12 @@ public class Main {
 
         Ambiente temperatura = Ambiente.getTemperatura(15.0);
         Calentable radiador = new Calentador();
-        Termosensible thermometer = new RemoteCommandSensor();
+        Termosensible sensorTemp = new Termometro();
 
         Regulator regulator = new Regulator();
 
         System.out.println( "Arrancando..." );
-        regulator.regulate(thermometer, radiador, minTemp, maxTemp, temperatura);
+        regulator.regulate(sensorTemp, radiador, minTemp, maxTemp, temperatura);
 
         Jedi yoda = new Jedi();
         System.out.println( "\nArrancando a Yoda: " );
