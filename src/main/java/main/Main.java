@@ -2,6 +2,7 @@ package main;
 
 import ambiente.Ambiente;
 import detalles.Regulator;
+import interfaces.Calentable;
 
 public class Main {
 
@@ -11,13 +12,13 @@ public class Main {
         final double maxTemp = 21.0;
 
         Ambiente temperatura = Ambiente.getTemperatura(15.0);
-        Heater heater = new GasHeater();
+        Calentable radiador = new GasHeater();
         Thermometer thermometer = new RemoteCommandSensor();
 
         Regulator regulator = new Regulator();
 
         System.out.println( "Arrancando..." );
-        regulator.regulate(thermometer, heater, minTemp, maxTemp, temperatura);
+        regulator.regulate(thermometer, radiador, minTemp, maxTemp, temperatura);
 
         Jedi yoda = new Jedi();
         System.out.println( "\nArrancando a Yoda: " );
