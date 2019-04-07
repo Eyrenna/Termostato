@@ -6,16 +6,18 @@ import interfaces.Calentable;
 public class Calentador implements Calentable {
 
     //Atributos
+
     private final double SUBIDA = 1;
     private final double BAJADA = -1;
+
 
     //Constructor
 
     public Calentador() {
     }
 
-    //Métodos
 
+    //Métodos
 
     @Override
     public void engage(Ambiente temperatura) {

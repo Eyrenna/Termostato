@@ -4,6 +4,7 @@ import ambiente.Ambiente;
 import componentes.Calentador;
 import componentes.Regulator;
 import interfaces.Calentable;
+import interfaces.Termosensible;
 
 public class Main {
 
@@ -14,7 +15,7 @@ public class Main {
 
         Ambiente temperatura = Ambiente.getTemperatura(15.0);
         Calentable radiador = new Calentador();
-        Thermometer thermometer = new RemoteCommandSensor();
+        Termosensible thermometer = new RemoteCommandSensor();
 
         Regulator regulator = new Regulator();
 

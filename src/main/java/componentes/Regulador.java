@@ -2,18 +2,19 @@ package componentes;
 
 import ambiente.Ambiente;
 import interfaces.Calentable;
+import interfaces.Termosensible;
 
 
 public class Regulator {
 
-    public void regulate(Thermometer t, Calentable calentador, double minTemp, double maxTemp, Ambiente temperatura) {
+    public void regulate(Termosensible termometro, Calentable calentador, double minTemp, double maxTemp, Ambiente temperatura) {
         RegulatorDisplayCodes code;
-        while (t.read(temperatura) < maxTemp) {
+        while (termometro.read(temperatura) < maxTemp) {
             code = RegulatorDisplayCodes.HEATING;
             calentador.engage(temperatura);
             message(code, temperatura);
         }
-        while (t.read(temperatura) > minTemp) {
+        while (termometro.read(temperatura) > minTemp) {
             code = RegulatorDisplayCodes.WAITING;
             calentador.disengage(temperatura);
             message(code, temperatura);
