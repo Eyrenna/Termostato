@@ -1,4 +1,4 @@
-package componentes;
+package componentes.calentador;
 
 import ambiente.Ambiente;
 import interfaces.Calentable;

@@ -1,7 +1,8 @@
 package main;
 
 import ambiente.Ambiente;
-import componentes.Calentador;
+import componentes.calentador.Calentador;
+import componentes.calentador.EstufaSolar;
 import componentes.regulador.Regulador;
 import componentes.Termometro;
 import interfaces.Calentable;
@@ -23,9 +24,10 @@ public class Main {
         System.out.println( "Arrancando..." );
         regulador.regular(sensorTemp, radiador, minTemp, maxTemp, temperatura);
 
-        /*Jedi yoda = new Jedi();
-        System.out.println( "\nArrancando a Yoda: " );
-        regulator.regulate(thermometer, yoda, minTemp, maxTemp, temperatura);
-        yoda.speak();*/
+        Calentable solaris = new EstufaSolar();
+        ((EstufaSolar) solaris).setReservas(60);
+        ((EstufaSolar) solaris).setAlertaReserva(35);
+        System.out.println( "Arrancando sistema de energía solar...");
+        regulador.regular(sensorTemp, solaris, minTemp, maxTemp, temperatura);
     }
 }
