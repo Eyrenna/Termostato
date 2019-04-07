@@ -1,7 +1,7 @@
 package main;
 
 import ambiente.Ambiente;
-import detalles.Regulator;
+import componentes.Regulator;
 import interfaces.Calentable;
 
 public class Main {

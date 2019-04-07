@@ -1,4 +1,4 @@
-package detalles;
+package componentes;
 
 import ambiente.Ambiente;
 import interfaces.Calentable;
