@@ -46,18 +46,20 @@ public class Main {
         ((EstufaSolar) solaris).setAlertaReserva(35);
         System.out.println( "Arrancando sistema de energía solar...");
         regulador.regular(sensorTemp, solaris, minTemp, maxTemp, temperatura);
+        System.out.println( "Estado de la reserva de energía: " + ((EstufaSolar) solaris).getReservas());
 
-        /*___SALIDA CONSOLA____*/
+        /*___SALIDA CONSOLA____*/                       /*Calculos Reserva*/
         /*
         Arrancando sistema de energía solar...
-        Calentando => temperatura 17.0
-        Calentando => temperatura 19.0
-        Calentando => temperatura 21.5
-        Apagado => temperatura 20.0
-        Apagado => temperatura 18.5
-        Apagado => temperatura 17.0
-        Apagado => temperatura 15.5
-        Apagado => temperatura 14.0
+        Calentando => temperatura 17.0                     >50   (-10)
+        Calentando => temperatura 19.0                     >40   (-10)
+        Calentando => temperatura 21.5                     >30   (-10) ERROR (-10)(-5) Sube Ta (2)(0.5)
+        Apagado => temperatura 20.0                        >35   (+5)
+        Apagado => temperatura 18.5                        >40   (+5)
+        Apagado => temperatura 17.0                        >45   (+5)
+        Apagado => temperatura 15.5                        >50   (+5)
+        Apagado => temperatura 14.0                        >55   (+5)
+        Estado de la reserva de energía: 50.0
         */
 
         /*Calentable solarjet = new EstufaSolar();
