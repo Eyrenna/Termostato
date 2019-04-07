@@ -2,10 +2,11 @@ package componentes.regulador;
 
 import ambiente.Ambiente;
 import interfaces.Calentable;
+import interfaces.Regulable;
 import interfaces.Termosensible;
 
 
-public class Regulador {
+public class Regulador implements Regulable {
 
     public void regular(Termosensible termometro, Calentable calentador, double minTemp, double maxTemp, Ambiente temperatura) {
         ReguladorDisplayCodes code;
@@ -21,7 +22,8 @@ public class Regulador {
         }
     }
 
-    private void message(ReguladorDisplayCodes code, Ambiente temperatura) {
+
+    public void message(ReguladorDisplayCodes code, Ambiente temperatura) {
         switch (code) {
             case HEATING:
                 System.out.println("Calentando => temperatura " + temperatura.getTemp());
