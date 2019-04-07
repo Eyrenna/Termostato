@@ -41,6 +41,7 @@ public class EstufaSolar implements Calentable {
     }
 
     public double getAlertaReserva() {
+
         return alertaReserva;
     }
 
@@ -52,14 +53,15 @@ public class EstufaSolar implements Calentable {
             temperatura.modificarTemperatura(this.MAX_RENDIMIENTO);
             setReservas(modificarReservas(this.CONSUMO));
         }
-        if (reservas < alertaReserva && reservas > NO_RESERVAS) {
-            temperatura.modificarTemperatura(this.MIN_RENDIMIENTO);
-            modificarReservas(this.BAJO_CONSUMO);
+        if (reservas < alertaReserva) {
+            if (reservas > NO_RESERVAS) {
+                temperatura.modificarTemperatura(this.MIN_RENDIMIENTO);
+                modificarReservas(this.BAJO_CONSUMO);
+            }
+            else {
+                disengage(temperatura);
+            }
         }
-        else {
-            disengage(temperatura);
-        }
-
     }
 
     @Override
