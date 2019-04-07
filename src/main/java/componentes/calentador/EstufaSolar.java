@@ -15,6 +15,7 @@ public class EstufaSolar implements Calentable {
     private final double MIN_RENDIMIENTO = 0.5;
     private final int BAJO_CONSUMO = -5;
     private final double ENFRIAMIENTO = -1.5;
+    private final double RECARGA = 5;
 
 
     //Constructor
@@ -66,7 +67,7 @@ public class EstufaSolar implements Calentable {
 
     public void disengage(Ambiente temperatura) {
         temperatura.modificarTemperatura(this.ENFRIAMIENTO);
-        modificarReservas(5);
+        modificarReservas(this.RECARGA);
     }
 
     public double modificarReservas(double variacion) {
