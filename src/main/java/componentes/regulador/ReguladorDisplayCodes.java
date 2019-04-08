@@ -5,6 +5,8 @@ public enum ReguladorDisplayCodes {
     //Codes
 
     HEATING,
-    WAITING;
+    WAITING,
+    FUEGO,
+    HIELO
 
 }
