@@ -54,14 +54,13 @@ public class Main {
         /*___SALIDA CONSOLA____*/                       /*Calculos Reserva*/
         /*
         Arrancando sistema de energía solar...
-        Calentando => temperatura 17.0                     >50   (-10)
-        Calentando => temperatura 19.0                     >40   (-10)
-        Calentando => temperatura 21.5                     >30   (-10) ERROR (-10)(-5) Sube Ta (2)(0.5)
-        Apagado => temperatura 20.0                        >35   (+5)
-        Apagado => temperatura 18.5                        >40   (+5)
-        Apagado => temperatura 17.0                        >45   (+5)
-        Apagado => temperatura 15.5                        >50   (+5)
-        Apagado => temperatura 14.0                        >55   (+5)
+        Calentando => temperatura 17.0                      >50
+        Calentando => temperatura 19.0                      >40
+        Calentando => temperatura 21.0                      >30
+        Apagado => temperatura 19.5                         >35
+        Apagado => temperatura 18.0                         >40
+        Apagado => temperatura 16.5                         >45
+        Apagado => temperatura 15.0                         >50   CORRECTO!!
         Estado de la reserva de energía: 50.0
         */
 

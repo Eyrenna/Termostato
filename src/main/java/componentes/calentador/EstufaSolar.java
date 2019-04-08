@@ -54,7 +54,7 @@ public class EstufaSolar implements Calentable {
             temperatura.modificarTemperatura(this.MAX_RENDIMIENTO);
             setReservas(modificarReservas(this.CONSUMO));
         }
-        if (reservas < alertaReserva) {
+        else {
             if (reservas > NO_RESERVAS) {
                 temperatura.modificarTemperatura(this.MIN_RENDIMIENTO);
                 modificarReservas(this.BAJO_CONSUMO);
