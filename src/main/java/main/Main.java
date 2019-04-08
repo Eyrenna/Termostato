@@ -71,12 +71,12 @@ public class Main {
         System.out.println( "Arrancando sistema de energía solar...");
         regulador.regular(sensorTemp, solarjet, minTemp, maxTemp, temperatura);*/
 
-        Calentable dragones = new Daenerys();
+        /*Calentable dragones = new Daenerys();
         Regulable jonNieve = new GuardiaNoche();
         System.out.println( "Hace su entrada Daenerys de la Tormenta de la casa Targaryen, " +
                 "\nlegítima heredera del Trono de Hierro, Reina de los Ándalos y los Primeros Hombres, " +
                 "\nProtectora de los SIte Reinos, Madre de Dragones, la Khaleesi del Gran Mar de Hierba  " +
                 "\nla que no arde, Rompedora de cadenas");
-        regulador.regular(sensorTemp, dragones, minTemp, maxTemp, temperatura);
+        regulador.regular(sensorTemp, dragones, minTemp, maxTemp, temperatura);*/
     }
 }
