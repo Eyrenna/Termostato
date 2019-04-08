@@ -5,7 +5,10 @@ import componentes.calentador.Calentador;
 import componentes.calentador.EstufaSolar;
 import componentes.regulador.Regulador;
 import componentes.Termometro;
+import got.Daenerys;
+import got.GuardiaNoche;
 import interfaces.Calentable;
+import interfaces.Regulable;
 import interfaces.Termosensible;
 
 public class Main {
@@ -67,5 +70,13 @@ public class Main {
         ((EstufaSolar) solarjet).setAlertaReserva(15);
         System.out.println( "Arrancando sistema de energía solar...");
         regulador.regular(sensorTemp, solarjet, minTemp, maxTemp, temperatura);*/
+
+        Calentable dragones = new Daenerys();
+        Regulable jonNieve = new GuardiaNoche();
+        System.out.println( "Hace su entrada Daenerys de la Tormenta de la casa Targaryen, " +
+                "\nlegítima heredera del Trono de Hierro, Reina de los Ándalos y los Primeros Hombres, " +
+                "\nProtectora de los SIte Reinos, Madre de Dragones, la Khaleesi del Gran Mar de Hierba  " +
+                "\nla que no arde, Rompedora de cadenas");
+        regulador.regular(sensorTemp, dragones, minTemp, maxTemp, temperatura);
     }
 }
