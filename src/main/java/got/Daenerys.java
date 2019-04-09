@@ -8,7 +8,7 @@ public class Daenerys implements Calentable {
     //Atributos
 
     private final int DRAGONFUEGO = 150419;
-    private final int DRAGONHIELO = 137117;
+    private final int DRAGONHIELO = -137117;
 
     //Métodos
 
