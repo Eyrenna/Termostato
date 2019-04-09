@@ -60,7 +60,7 @@ public class EstufaSolar implements Calentable {
                 modificarReservas(this.BAJO_CONSUMO);
             }
             else {
-                disengage(temperatura);
+                System.out.println("Nivel de reserva bajo: " + getReservas());
             }
         }
     }

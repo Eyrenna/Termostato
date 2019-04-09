@@ -16,7 +16,7 @@ public class Normalizador implements Regulable {
                     calentador.engage(temperatura);
                     message(code, temperatura);
             }
-            else ;
+            else break;
         }
         while (termometro.read(temperatura) > minTemp) {
             code = ReguladorDisplayCodes.WAITING;
